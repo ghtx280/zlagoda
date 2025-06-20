@@ -41,7 +41,7 @@
 
 	let dialogState: 'new' | 'edit' = $state('new');
 
-	let selectedCategoryId: number = $state(null);
+	let selectedCategoryId: number = $state(0);
 </script>
 
 <div class="px-20 pt-5">
@@ -59,7 +59,7 @@
 		</div>
 
 		<div class="flex items-center justify-between gap-2">
-			<Input type="search" bind:value={searchQuery} />
+			<Input type="search" bind:value={searchQuery} placeholder="Search..." />
 
 			<Button size="sm" onclick={filterCategories}>search</Button>
 		</div>
